@@ -90,7 +90,7 @@ typedef unsigned long UINT32_t;
 #ifdef HAVE_SYS_SOCKET_H
 #include <sys/socket.h>
 #endif
-#ifndef HAVE_SYS_DLPI_H
+#if !defined(HAVE_SYS_DLPI_H) && !defined(HAVE_LINUX_IF_ETHER_H)
 #include <netinet/if_ether.h>
 #endif
 #endif
