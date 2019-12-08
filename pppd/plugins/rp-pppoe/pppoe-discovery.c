@@ -27,10 +27,6 @@
 #include <linux/if_packet.h>
 #endif
 
-#ifdef HAVE_NET_ETHERNET_H
-#include <net/ethernet.h>
-#endif
-
 #ifdef HAVE_ASM_TYPES_H
 #include <asm/types.h>
 #endif
@@ -54,6 +50,8 @@ void die(int status)
 {
 	exit(status);
 }
+
+#define error(x...) fprintf(stderr, x)
 
 /* Initialize frame types to RFC 2516 values.  Some broken peers apparently
    use different frame types... sigh... */

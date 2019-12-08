@@ -102,19 +102,11 @@
 #define MAX_ADDR_LEN 7
 #endif
 
-#if __GLIBC__ >= 2
 #include <asm/types.h>		/* glibc 2 conflicts with linux/types.h */
 #include <net/if.h>
 #include <net/if_arp.h>
 #include <net/route.h>
 #include <netinet/if_ether.h>
-#else
-#include <linux/types.h>
-#include <linux/if.h>
-#include <linux/if_arp.h>
-#include <linux/route.h>
-#include <linux/if_ether.h>
-#endif
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
