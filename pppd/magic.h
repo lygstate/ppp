@@ -41,6 +41,7 @@
  *
  * $Id: magic.h,v 1.5 2003/06/11 23:56:26 paulus Exp $
  */
+#include <sys/cdefs.h>
 
 void magic_init (void);	/* Initialize the magic number generator */
 u_int32_t magic (void);	/* Returns the next magic number */
